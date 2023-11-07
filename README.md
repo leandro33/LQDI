@@ -84,7 +84,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Teste prático
 
-Projeto iniciado em 07/11/2023.
+Projeto iniciado em 07/11/2023 às 16:14.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

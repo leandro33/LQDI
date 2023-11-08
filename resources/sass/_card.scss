@@ -1,0 +1,83 @@
+.card {
+	background: $card-background;
+	display: flex;
+	height: 700px;
+	flex-wrap: wrap;
+	border-radius: 15px;
+	padding: 25px 35px;
+}
+
+.card > .title {
+	color: $main-text-inverse;                     
+	font-size: $card-header-size !important;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.2;            
+	letter-spacing: 0.4px;            
+	white-space: pre-line;
+	text-wrap: wrap;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 55px;
+}
+
+.card form input {            
+	border-radius: 15px;
+	padding: 7px 30px;
+	width: 95%;
+	height: 65px;
+	border-radius: 50px;
+	background: transparent;
+	border: 2px solid $main-text-inverse;
+	color: $main-text-inverse;
+}
+
+.card form input:active, .card form input:focus {            
+	border-radius: 15px;
+	padding: 7px 30px;
+	width: 95%;
+	height: 65px;
+	border-radius: 50px;
+	background: $main-text-inverse;
+	border: 2px solid $main-text-inverse;
+	color: $main-text;
+	outline: none;	
+}
+
+.card form input::placeholder {
+	text-align: center;
+	color: $main-text-inverse;
+}
+
+.card > .text {
+	color: $main-text-inverse;                     
+	font-size: 1$main-text-size;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.2;            
+	letter-spacing: 0.4px;            
+	white-space: pre-line;
+	text-wrap: wrap;
+	width: 100%;            
+}
+
+.card .icons {
+	display: flex;
+}
+
+.card .icons a {
+	cursor: pointer;
+	display: flex;
+	width: 54px;
+	height: 54px;
+	border: 1px solid $main-text-inverse;
+	border-radius: 50%;
+	margin-right: 12px;
+	background: $main-text-inverse;
+}
+
+.card .icons a img {
+	width: 27px;
+	height: 27px;
+	margin: auto;
+}

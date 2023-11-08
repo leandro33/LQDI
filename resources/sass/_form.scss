@@ -1,0 +1,65 @@
+form {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+label {
+	width: 100%;
+	padding: 5px 12px 20px 12px;
+	font-weight: bold;
+}
+
+input {
+	width: 81%;
+	padding: 12px;
+	border-radius: 30px;
+	background: $body-top;
+	border: 0px;
+	margin-bottom: 30px;
+}        
+
+input[type^="file"] {
+	width: 81%;
+	padding: 12px;
+	border-radius: 15px;
+	background: linear-gradient(to right, $body-top 0, $body-top 28%, $body-bottom 0);
+	margin-bottom: 30px;
+	border: 2px dashed $body-top;
+}
+
+input[type^="file"]::-webkit-file-upload-button {
+	border: 0 solid transparent;
+	background: $body-top;
+}
+
+input[type^="file"]::-webkit-file-upload-label {
+	padding-left: 15px;
+}
+
+input[type^="submit"] {
+	color: $body-bottom;
+	width: 100%;
+    max-width: 160px;
+	padding: 12px;
+	border-radius: 15px;
+	background: $card-background;
+	margin-bottom: 30px;
+	border-radius: 30px;
+	margin-top: 20px;
+	padding: 18px;
+    font-size: $main-link-size;
+}
+
+textarea {
+	height: 205px;
+	width: 81%;
+	border-radius: 15px;
+	background: $body-top;
+	border: 0px;
+	margin-bottom: 15px;
+}
+
+#submit > .content > .coll:last-child {           
+	padding: 0 15px;
+}

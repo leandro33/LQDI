@@ -1,0 +1,37 @@
+.lqdi-section {
+	padding: 80px 0;
+	min-height: 400px;
+}
+
+.lqdi-section--dark {
+	background: $footer-background;
+}
+
+#banner, section:nth-child(1) {
+	background: linear-gradient(to top, $body-bottom 0, $body-bottom 28%, $body-top 0);
+}
+
+#articles figure {
+	width: 30%;
+}
+
+#articles figure:last-child {
+	width: 40%;
+}
+
+#banner {
+	padding-top: 120px;
+}
+
+.banner-img {
+	border-radius: 15px;
+}
+
+#articles h3 {
+    font-size: $article-header-size;
+}
+
+#message figure {
+    padding-left: 12%;
+    padding-right: 50px;
+} 

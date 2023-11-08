@@ -1,19 +1,26 @@
-// Body
-$body-bg: #f8fafc;
-
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+
+$header-size: 36px;
+$header-size-small: 20px;
+$form-header-size: 32px;
+$article-header-size: 24px;
+$card-header-size: 32px;
+$main-text-size: 15px;
+$main-link-size: 14px;
 
 // Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66d9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+
+$body-top: #F1F4F9;
+$body-bottom: #FFFFFF;
+$footer-background: #000000;
+$background-button-black: #000000;
+$label-button-black: #FFFFFF;
+$background-button-teal: #0AB2B7;
+$label-button-teal: #FFFFFF;
+$main-text: #08111E;
+$main-text-inverse: #FFFFFF;
+$form-text: #080808;
+$form-labels: #101113;
+$form-background: #F1F4F9;
+$article-link: #101113;
+$card-background: #090909;

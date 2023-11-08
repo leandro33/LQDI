@@ -14,6 +14,15 @@
 
 <script>
     export default {
-        name: "Header"
+        name: "Header",
+        mounted() {
+            window.onscroll = function () {                
+                if ( this.scrollY > 50 ) {
+                    document.querySelector( '.lqdi-header' ).classList.add( 'scrolling' );
+                } else {
+                    document.querySelector( '.lqdi-header' ).classList.remove( 'scrolling' );
+                }
+            }                        
+        }
     }
 </script>

@@ -1,0 +1,49 @@
+.right {
+    margin-left: auto;
+}
+
+.bottom {
+    margin-bottom: auto;
+}
+
+.clear-right-padd {
+    padding-right: 0;
+}
+
+.clear-margin-bottom {
+    margin-bottom: 0;
+}
+
+.flex-align-center {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-align-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: end;
+}
+
+.auto-height {
+    height: auto !important;
+}
+
+.padd-left-100 {
+    padding-left: 100px;
+	padding-top: 34px;
+}
+
+.height-400 {
+    height: 400px;
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+.break-mobile-2 {
+	flex-wrap: inherit;
+    display: inherit;
+}

@@ -1,0 +1,41 @@
+.lqdi-header {
+	padding: 2em 0;
+	position: fixed;
+    width: 100%;	
+    background: $body-top;
+	z-index: 2;
+    transition-duration: 1s;
+}
+
+.lqdi-header.scrolling {
+	background: $body-bottom;
+    // border-bottom: 1px solid $body-top;
+    // padding: 2em 0 1em 0;
+}
+
+.lqdi-nav {
+	padding: 0 10px;
+	line-height: 2.25;
+}
+
+.lqdi-nav span {
+	font-weight: bold;
+	display: inline-block;
+	margin: 0 30px;
+}
+
+.lqdi-logo {
+	display: block;
+	font-weight: bold;
+	padding: 0 20px;
+	font-size: 1.5em;
+	line-height: 1.5;
+}
+
+.lqdi-logo .fa {
+	margin-right: 10px;
+}
+
+.header-padd {
+	padding: 0 60px;
+}

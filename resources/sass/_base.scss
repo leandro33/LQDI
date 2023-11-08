@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'PlusJakartaSans';            
+    src: url('../fonts/plus-jakarta-sans/static/PlusJakartaSans-Regular.ttf')  format('truetype');                 
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after {display: table;  content: ''; }
+.clearfix:after { clear: both; }
+
+body {	
+	font-weight: 500;
+	font-size: $main-text-size; // 1em;
+	font-family: 'PlusJakartaSans', Arial, sans-serif;
+}
+
+.h1, .h2 {
+    white-space: pre-line;
+    text-wrap: wrap;   
+	margin-top: 0;
+}
+
+.h1 {
+    font-size: $header-size;
+}
+
+.h2 {
+    font-size: $form-header-size;
+}
+
+h3  {
+	font-size: $header-size-small;
+}
+
+h3 span  {
+	font-size: $main-text;
+}
+
+a {
+	outline: none;
+	color: transparent;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: $main-text-inverse;
+}
+
+button:focus {
+	outline: none;
+}
+
+span, p, strong, label {
+    font-size: $main-text-size;
+}
+
+/* Content */
+
+.content {	
+	padding: 0;
+	background: $body-bottom;
+	color: $main-text;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

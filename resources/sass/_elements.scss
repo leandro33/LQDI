@@ -1,0 +1,132 @@
+.lqdi-img {	
+	text-align: center;
+	line-height: 260px;
+	height: 260px;
+	font-size: 40px;
+	color: $main-text;
+	overflow: hidden;
+}
+
+.lqdi-img img {
+	width: 100%;
+	height: 100%;
+}
+
+.lqdi-link {
+	background: transparent;
+	text-align: center;
+	line-height: 90px;
+	font-weight: bold;
+	height: 260px;	
+	color: $article-link;
+}
+
+.lqdi-link > i {	
+	color: $article-link;
+}
+
+.lqdi-link:hover, .lqdi-link:focus {
+    color: $article-link;
+}
+
+.lqdi-img--large {
+	height: 300px;
+	line-height: 300px;
+}
+
+.lqdi-grid__item > p {
+	line-height: 1.65;
+	margin: 0;
+}
+
+.lqdi-caption > h3 {
+	margin: 0;
+	padding: 1em 0 0.5em;
+}
+
+.lqdi-caption--box {
+	background: transparent;	
+}
+
+.lqdi-section--dark .lqdi-caption--box {
+	background: $main-text-inverse;
+}
+
+.lqdi-pricing {
+	text-align: left;
+	padding: 0 0 20px;
+}
+
+.lqdi-bigtext {
+	font-size: 3em;
+	font-weight: bold;
+	padding: 30px 0;
+}
+
+.lqdi-list-wrap {
+	margin: 0 0 15px 0;
+	padding: 10px 0;
+	color: $main-text-inverse;
+}
+
+.lqdi-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 20px;
+}
+
+.lqdi-list li {
+	padding: 10px;
+}
+
+.lqdi-list li:last-child {
+	padding-top: 20px;
+}
+
+.lqdi-button {
+	border: none;
+	background: $form-background;
+	color: $main-text-inverse;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: $main-link-size;
+	padding: 1.5em 2.5em;
+	margin: 20px 0;
+	white-space: nowrap;
+}
+
+.lqdi-button .fa {
+	margin-left: 10px;
+}
+
+.header-button {
+	border: none;
+	background: $background-button-black;
+	color: $main-text-inverse;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: $main-link-size;
+	padding: 1.3em 2.5em;
+	margin: 20px 0;
+	white-space: nowrap;
+	border-radius: 30px;
+}
+
+.banner-button {
+	border: none;
+	background: $background-button-teal;
+	color: $main-text-inverse;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: $main-link-size;
+	padding: 1.3em 2.5em;
+	margin: 20px 0;
+	white-space: nowrap;
+	border-radius: 30px;
+}

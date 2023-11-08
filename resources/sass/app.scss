@@ -1,8 +1,15 @@
-// Fonts
-// @import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
 
-// LQDI
-@import 'lqdi.scss';
+// Styles
+@import 'base';
+@import 'header';
+@import 'section';
+@import 'grid';
+@import 'heading';
+@import 'elements';
+@import 'fixes';
+@import 'card';
+@import 'form';
+@import 'footer';
+@import 'media';

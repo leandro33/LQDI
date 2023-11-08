@@ -1,0 +1,27 @@
+.lqdi-heading {
+	width: 100%;
+	margin: 0;
+}
+
+.lqdi-heading__subline {
+	display: block;
+	font-size: $header-size-small;
+	margin: 25px 0 15px;
+}
+
+.lqdi-heading--single {
+	padding: 0 20px 1.5em;
+}
+
+.lqdi-heading--box {
+	padding: 30px;
+	color: $main-text-inverse;
+}
+
+.lqdi-heading--box > span {
+	display: block;
+}
+
+.lqdi-heading--large {
+	font-size: $header-size;
+}

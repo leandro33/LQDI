@@ -1,0 +1,15 @@
+.nav-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    background: $card-background;
+    color: $form-background;
+    list-style: none;
+    padding: 15px 30px;
+
+    a, a:active, a:focus, a:hover {
+        margin-left: 30px;
+        color: $form-background;
+        outline: none;
+    }
+}

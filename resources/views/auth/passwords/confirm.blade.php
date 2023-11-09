@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.landpage')
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="content">
+        <div class="lqdi-content lqdi-grid">
             <div class="card">
                 <div class="card-header">{{ __('Confirm Password') }}</div>
 
@@ -13,10 +13,10 @@
                     <form method="POST" action="{{ route('password.confirm') }}">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                        <div class="form-group lqdi-grid__item">
+                            <label for="password" class="lqdi-width--third col-form-label text-md-right">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="lqdi-width--half">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
@@ -27,8 +27,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                        <div class="form-group lqdi-grid__item mb-0">
+                            <div class="lqdi-content lqdi-grid offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Confirm Password') }}
                                 </button>

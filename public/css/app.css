@@ -83,12 +83,12 @@ label {
 }
 
 .lqdi-header {
-  padding: 2em 0;
+  padding: 1em 0;
   position: fixed;
   width: 100%;
   background: #F1F4F9;
   z-index: 2;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 
 .lqdi-header.scrolling {
@@ -97,7 +97,7 @@ label {
 
 .lqdi-nav {
   padding: 0 10px;
-  line-height: 2.25;
+  line-height: 3.5em;
 }
 
 .lqdi-nav span {
@@ -140,7 +140,7 @@ section:nth-child(1) {
   width: 30%;
 }
 
-#articles figure:last-child {
+#articles .lqdi-grid__item:last-child {
   width: 40%;
 }
 
@@ -601,6 +601,176 @@ footer figure:first-child {
   padding: 0px 50px;
 }
 
+#auth .card {
+  background: transparent;
+  width: 100%;
+  height: auto;
+}
+
+#auth .card-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#auth .card-header img {
+  display: block;
+  margin: 50px auto;
+}
+
+#auth .card-body {
+  padding: 0 20em;
+}
+
+#auth input[type^=email],
+#auth input[type^=password] {
+  color: #08111E;
+  width: 100%;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background: #F1F4F9;
+  border: 0px;
+  margin: 0;
+}
+
+#auth input[type^=email]:active,
+#auth input[type^=password]:active,
+#auth input[type^=email]:focus,
+#auth input[type^=password]:focus {
+  color: #08111E;
+}
+
+#auth input[type^=checkbox] {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
+#auth input[type^=submit] {
+  color: #FFFFFF;
+  width: 100%;
+  max-width: 160px;
+  padding: 12px;
+  border-radius: 15px;
+  background: #090909;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  margin-top: 20px;
+  padding: 18px;
+  font-size: 14px;
+}
+
+#auth form {
+  flex-direction: column;
+}
+
+#auth .form-group {
+  margin-bottom: 30px;
+}
+
+#auth label {
+  display: block;
+  width: 100%;
+}
+
+#auth span[role^=alert] {
+  display: block;
+  padding: 18px;
+  -webkit-text-decoration: auto;
+          text-decoration: auto;
+  font-style: italic;
+}
+
+#auth button {
+  border: none;
+  background: #000000;
+  color: #FFFFFF;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 1.3em 2.5em;
+  margin: 20px 0;
+  white-space: nowrap;
+  border-radius: 30px;
+}
+
+#auth .form-check {
+  display: block;
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+#auth .form-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+#auth .checkmark {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #F1F4F9;
+}
+
+#auth .form-check:hover input ~ .checkmark {
+  background-color: #F1F4F9;
+}
+
+#auth .form-check input:checked ~ .checkmark {
+  background-color: #000000;
+}
+
+#auth .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+#auth .form-check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#auth .form-check .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.nav-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  background: #090909;
+  color: #F1F4F9;
+  list-style: none;
+  padding: 15px 30px;
+}
+
+.nav-item a,
+.nav-item a:active,
+.nav-item a:focus,
+.nav-item a:hover {
+  margin-left: 30px;
+  color: #F1F4F9;
+  outline: none;
+}
+
 @media screen and (max-width: 70em) {
   .lqdi-width--forth {
     width: 50%;
@@ -748,6 +918,14 @@ footer figure:first-child {
   #message figure {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  #auth .card {
+    width: 100%;
+  }
+
+  #auth .card-body {
+    padding: 0 1em;
   }
 }
 

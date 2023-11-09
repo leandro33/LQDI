@@ -2,6 +2,6 @@
 
 @section('content')
 
-    <lqdi-layout></lqdi-layout>
+    <lqdi-landpage></lqdi-landpage>
 
 @endsection

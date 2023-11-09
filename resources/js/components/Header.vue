@@ -1,5 +1,5 @@
 <template>
-    <header class="lqdi-header">
+    <header class="lqdi-header" ref="header">
         <div class="lqdi-content lqdi-grid lqdi-grid--spread header-padd">
             <div class="lqdi-logo">
                 <img src="img/logo-lqdi-positivo-header.png" alt="LQDI">
@@ -15,13 +15,11 @@
 <script>
     export default {
         name: "Header",
-        mounted() {
+        mounted() {            
+            const self = this;
             window.onscroll = function () {                
-                if ( this.scrollY > 50 ) {
-                    document.querySelector( '.lqdi-header' ).classList.add( 'scrolling' );
-                } else {
-                    document.querySelector( '.lqdi-header' ).classList.remove( 'scrolling' );
-                }
+                this.scrollY > 50 ? self.$refs.header.classList.add( 'scrolling' ) :
+                    self.$refs.header.classList.remove( 'scrolling' );                
             }                        
         }
     }

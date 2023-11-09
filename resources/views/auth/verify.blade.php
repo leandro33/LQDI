@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.landpage')
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="content">
+        <div class="lqdi-content lqdi-grid">
             <div class="card">
                 <div class="card-header">{{ __('Verify Your Email Address') }}</div>
 

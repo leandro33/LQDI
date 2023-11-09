@@ -1,10 +1,10 @@
 .lqdi-header {
-	padding: 2em 0;
+	padding: 1em 0;
 	position: fixed;
     width: 100%;	
     background: $body-top;
 	z-index: 2;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 .lqdi-header.scrolling {
@@ -15,7 +15,7 @@
 
 .lqdi-nav {
 	padding: 0 10px;
-	line-height: 2.25;
+    line-height: 3.5em;
 }
 
 .lqdi-nav span {

@@ -6,8 +6,8 @@
                     <img src="img/Rectangle113.png" alt="Tecnologia">
                 </div>
                 <figcaption class="lqdi-caption lqdi-caption--box">
-                    <h3 class="paint-area paint-area--text">Por que é importante ter um site de qualidade?</h3>
-                    <p class="paint-area paint-area--text">Um site de qualidade passou a ser um dos meios de exposição de marca mais
+                    <h3>Por que é importante ter um site de qualidade?</h3>
+                    <p>Um site de qualidade passou a ser um dos meios de exposição de marca mais
                         eficientes no ambiente online. Ele funciona como uma espécie de cartão...</p>
                     <a href="#" class="lqdi-link"><span>Ir para o artigo</span> <i class="fa fa-chevron-right"></i></a>
                 </figcaption>
@@ -17,13 +17,13 @@
                     <img src="img/Rectangle114.png" alt="Tecnologia">
                 </div>
                 <figcaption class="lqdi-caption lqdi-caption--box">
-                    <h3 class="paint-area paint-area--text">6 dicas para trabalhar com marketing digital com verba limitada.</h3>
-                    <p class="paint-area paint-area--text">Um site de qualidade passou a ser um dos meios de exposição de marca mais eficientes
+                    <h3>6 dicas para trabalhar com marketing digital com verba limitada.</h3>
+                    <p>Um site de qualidade passou a ser um dos meios de exposição de marca mais eficientes
                         no ambiente online. Ele funciona como uma espécie de cartão...</p>
                     <a href="#" class="lqdi-link"><span>Ir para o artigo</span> <i class="fa fa-chevron-right"></i></a>
                 </figcaption>
             </figure>
-            <figure class="lqdi-grid__item lqdi-width--third break-mobile-4">
+            <div class="lqdi-grid__item lqdi-width--third break-mobile-4">
                 <div class="card">
                     <h3 class="title">
                         Receba os nossos
@@ -45,7 +45,7 @@
                         <a><img src="img/ri_linkedin-box-fill.png" alt="linkedin"></a>
                     </div>
                 </div>  
-            </figure>
+            </div>
         </div>
     </section> 
 </template>

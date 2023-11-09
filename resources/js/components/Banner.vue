@@ -3,7 +3,7 @@
         <div class="lqdi-content lqdi-grid">
             <div class="lqdi-grid__item lqdi-width--half clear-right-padd">
                 <div class="lqdi-grid__item auto-height">                               
-                    <h1 class="lqdi-heading lqdi-heading--large paint-area paint-area--text h1">
+                    <h1 class="lqdi-heading lqdi-heading--large h1">
                         Construímos estratégias,
                         design e tecnologia de ponta
                         para o seu negócio                                    

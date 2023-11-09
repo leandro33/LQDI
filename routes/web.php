@@ -13,14 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/lqdi', function () {
-    return view('landpage.lqdi.index');
-});
+// Route::get('/lqdi', function () {
+//     return view('landpage.lqdi.index');
+// });
+
+Route::get('/emails', 'LandPageController@emails')->name('emails');
+
+Route::get('/', 'LandPageController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+

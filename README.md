@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="$">
-    <img src="public/img/logo-lqdi-positivo-footer.png" alt="Logo" width="80" height="80">
+    <img src="public/img/logo-lqdi-positivo-footer.png" alt="Logo">
   </a>
 
   <h3 align="center">LQDI - PROCESSO SELETIVO - FULL STACK PHP ENGINEER</h3>

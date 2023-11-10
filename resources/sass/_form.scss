@@ -12,7 +12,7 @@ label {
 
 input {
 	width: 81%;
-	padding: 12px;
+	padding: 12px 30px;
 	border-radius: 30px;
 	background: $body-top;
 	border: 0px;
@@ -21,7 +21,7 @@ input {
 
 input[type^="file"] {
 	width: 81%;
-	padding: 12px;
+	padding: 12px 30px;
 	border-radius: 15px;
 	background: linear-gradient(to right, $body-top 0, $body-top 28%, $body-bottom 0);
 	margin-bottom: 30px;
@@ -54,6 +54,7 @@ input[type^="submit"] {
 textarea {
 	height: 205px;
 	width: 81%;
+	padding: 12px;
 	border-radius: 15px;
 	background: $body-top;
 	border: 0px;

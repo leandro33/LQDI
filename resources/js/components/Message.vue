@@ -10,9 +10,9 @@
             <div class="lqdi-grid__item lqdi-width--half">
                 <form class="form">
                     <label for="name">Seu nome (requerido) </label>
-                    <input type="text" name="name">
-                    <label for="email">Seu E-mail (requerido) </label>
-                    <input type="text" name="email">
+                    <input type="text" name="name" required autocomplete="name">
+                    <label for="email" >Seu E-mail (requerido) </label>
+                    <input type="email" name="email" required autocomplete="email">
                     <label for="subject">Assunto </label>
                     <input type="text" name="subject">
                     <label for="message">Mensagem</label>

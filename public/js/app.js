@@ -2096,8 +2096,11 @@ var staticRenderFns = [function () {
     staticClass: "form"
   }, [_c("input", {
     attrs: {
-      type: "text",
-      placeholder: "Escreva aqui seu e-mail..."
+      type: "email",
+      name: "email",
+      placeholder: "Escreva aqui seu e-mail...",
+      required: "",
+      autocomplete: "name"
     }
   })]), _vm._v(" "), _c("div", {
     staticClass: "text"
@@ -2432,7 +2435,9 @@ var staticRenderFns = [function () {
   }, [_vm._v("Seu nome (requerido) ")]), _vm._v(" "), _c("input", {
     attrs: {
       type: "text",
-      name: "name"
+      name: "name",
+      required: "",
+      autocomplete: "name"
     }
   }), _vm._v(" "), _c("label", {
     attrs: {
@@ -2440,8 +2445,10 @@ var staticRenderFns = [function () {
     }
   }, [_vm._v("Seu E-mail (requerido) ")]), _vm._v(" "), _c("input", {
     attrs: {
-      type: "text",
-      name: "email"
+      type: "email",
+      name: "email",
+      required: "",
+      autocomplete: "email"
     }
   }), _vm._v(" "), _c("label", {
     attrs: {

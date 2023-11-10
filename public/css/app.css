@@ -527,7 +527,7 @@ label {
 
 input {
   width: 81%;
-  padding: 12px;
+  padding: 12px 30px;
   border-radius: 30px;
   background: #F1F4F9;
   border: 0px;
@@ -536,7 +536,7 @@ input {
 
 input[type^=file] {
   width: 81%;
-  padding: 12px;
+  padding: 12px 30px;
   border-radius: 15px;
   background: linear-gradient(to right, #F1F4F9 0, #F1F4F9 28%, #FFFFFF 0);
   margin-bottom: 30px;
@@ -569,6 +569,7 @@ input[type^=submit] {
 textarea {
   height: 205px;
   width: 81%;
+  padding: 12px;
   border-radius: 15px;
   background: #F1F4F9;
   border: 0px;
@@ -598,7 +599,7 @@ footer figure:last-child {
 
 footer figure:first-child {
   width: 40% !important;
-  padding: 0px 50px;
+  padding: 0px 25px;
 }
 
 #auth .card {

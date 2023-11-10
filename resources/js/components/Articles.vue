@@ -32,7 +32,7 @@
                         entrada.
                     </h3>
                     <form class="form">
-                        <input type="text" placeholder="Escreva aqui seu e-mail...">
+                        <input type="email" name="email" placeholder="Escreva aqui seu e-mail..." required autocomplete="name">
                     </form>
                     <div class="text">
                         Siga-nos em

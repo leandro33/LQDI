@@ -31,7 +31,7 @@
                         na sua caixa de
                         entrada.
                     </h3>
-                    <form class="form">
+                    <form class="form" method="get" action="">
                         <input type="email" name="email" placeholder="Escreva aqui seu e-mail..." required autocomplete="name">
                     </form>
                     <div class="text">
@@ -40,9 +40,9 @@
                         sociais
                     </div>
                     <div class="icons">
-                        <a><img src="img/mdi_instagram.png" alt="instagram"></a>
-                        <a><img src="img/fe_facebook.png" alt="facebook"></a>
-                        <a><img src="img/ri_linkedin-box-fill.png" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/lqdi_net/" target="_blank"><img src="img/mdi_instagram.png" alt="instagram"></a>
+                        <a href="https://www.facebook.com/lqdi.net/" target="_blank"><img src="img/fe_facebook.png" alt="facebook"></a>
+                        <a href="https://www.linkedin.com/company/lqdi-t-image/about/" target="_blank"><img src="img/ri_linkedin-box-fill.png" alt="linkedin"></a>
                     </div>
                 </div>  
             </div>

@@ -16,7 +16,35 @@
         }
 
         &-body {
-            padding: 0 20em;
+            padding: 0 4em;            
+
+            table {
+                width: 100%;
+            }
+
+            thead {
+                border-bottom: 1px solid $card-background;           
+            }
+
+            thead, tbody {
+                background: $form-background;                
+            }
+
+            tbody tr {
+                border-bottom: 1px solid $table-line;
+            }
+
+            th {
+                text-align: left;
+                padding: 15px;
+            }
+
+            td {
+                text-align: left;
+                padding: 0 15px;
+            }
+
+
         }
     }
 

@@ -13,7 +13,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // UserRepository Eloquent
+        $this->app->bind(
+            'App\Repositories\Contracts\RepositoryInterface', 
+            'App\Repositories\UserRepository'
+        );
+
+        // UserRepository Outro ORM
+        // $this->app->bind(
+        //     'App\Repositories\Contracts\UserRepositoryInterface', 
+        //     'App\Repositories\UserRepositoryOutroORM'
+        // );
     }
 
     /**

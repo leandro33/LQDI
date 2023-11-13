@@ -111,7 +111,6 @@ label {
   font-weight: bold;
   padding: 0 20px;
   font-size: 1.5em;
-  line-height: 1.5;
 }
 
 .lqdi-logo .fa {
@@ -294,11 +293,6 @@ section:nth-child(1) {
   background: #FFFFFF;
 }
 
-.lqdi-pricing {
-  text-align: left;
-  padding: 0 0 20px;
-}
-
 .lqdi-bigtext {
   font-size: 3em;
   font-weight: bold;
@@ -330,7 +324,6 @@ section:nth-child(1) {
   background: #F1F4F9;
   color: #FFFFFF;
   line-height: 1;
-  text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
   font-size: 14px;
@@ -348,7 +341,6 @@ section:nth-child(1) {
   background: #000000;
   color: #FFFFFF;
   line-height: 1;
-  text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
   font-size: 14px;
@@ -363,7 +355,6 @@ section:nth-child(1) {
   background: #0AB2B7;
   color: #FFFFFF;
   line-height: 1;
-  text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
   font-size: 14px;
@@ -482,7 +473,7 @@ section:nth-child(1) {
 
 .card > .text {
   color: #FFFFFF;
-  font-size: 1 15px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.2;
@@ -513,7 +504,7 @@ section:nth-child(1) {
   margin: auto;
 }
 
-form {
+.form {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -602,6 +593,11 @@ footer figure:first-child {
   padding: 0px 25px;
 }
 
+.lqdi-pricing {
+  text-align: left;
+  padding: 0 0 20px;
+}
+
 #auth .card {
   background: transparent;
   width: 100%;
@@ -619,7 +615,34 @@ footer figure:first-child {
 }
 
 #auth .card-body {
-  padding: 0 20em;
+  padding: 0 4em;
+}
+
+#auth .card-body table {
+  width: 100%;
+}
+
+#auth .card-body thead {
+  border-bottom: 1px solid #090909;
+}
+
+#auth .card-body thead,
+#auth .card-body tbody {
+  background: #F1F4F9;
+}
+
+#auth .card-body tbody tr {
+  border-bottom: 1px solid #c9cfd9;
+}
+
+#auth .card-body th {
+  text-align: left;
+  padding: 15px;
+}
+
+#auth .card-body td {
+  text-align: left;
+  padding: 0 15px;
 }
 
 #auth input[type^=email],
@@ -788,11 +811,15 @@ footer figure:first-child {
   }
 
   #banner {
-    height: 1530px;
+    height: 1260px;
   }
 }
 
 @media screen and (max-width: 50em) {
+  #banner {
+    height: 1048px;
+  }
+
   .customizer {
     top: 0;
     width: 100%;
@@ -858,7 +885,7 @@ footer figure:first-child {
     flex-wrap: nowrap;
     display: flex;
     padding: 0;
-    top: -200px;
+    top: -148px;
   }
 
   .break-mobile-2 > div:first-child {
@@ -889,14 +916,22 @@ footer figure:first-child {
     padding-top: 160px;
   }
 
+  .header-button {
+    font-size: 12px;
+  }
+
+  .banner-button {
+    font-size: 14px;
+  }
+
   .lqdi-header {
-    padding: 0.5em 0;
-    height: 160px;
+    padding: 10px 0 0 0;
+    height: 140px;
   }
 
   .lqdi-nav a {
     position: relative;
-    top: 20px;
+    top: 18px;
   }
 
   footer figure {
@@ -927,6 +962,84 @@ footer figure:first-child {
 
   #auth .card-body {
     padding: 0 1em;
+  }
+
+  .lqdi-img--large {
+    height: 220px;
+    line-height: 300px;
+  }
+
+  .height-400 {
+    height: 260px;
+  }
+
+  .lqdi-img {
+    line-height: 260px;
+    height: 148px;
+  }
+
+  #articles h3 {
+    font-size: 18px;
+  }
+
+  span,
+  p,
+  strong,
+  label {
+    font-size: 12px;
+  }
+
+  .card > .title {
+    font-size: 26px !important;
+  }
+
+  footer figure {
+    margin-bottom: 60px;
+  }
+
+  footer .lqdi-grid__item {
+    margin: 0 0 30px;
+  }
+
+  .flex-align-center {
+    align-content: flex-end;
+  }
+
+  footer .lqdi-heading--box {
+    padding: 0;
+  }
+
+  .lqdi-list {
+    margin: 0;
+  }
+
+  .lqdi-list li {
+    padding: 10px 0;
+  }
+
+  input[type^=file] {
+    width: 100%;
+    background: linear-gradient(to right, #F1F4F9 0, #F1F4F9 52%, #FFFFFF 0);
+  }
+
+  footer .lqdi-grid__item:first-child {
+    margin: 0 0 50px;
+  }
+
+  footer .lqdi-grid__item:nth-child(2) {
+    margin: 0;
+  }
+
+  .lqdi-pricing {
+    padding: 0;
+  }
+
+  .lqdi-nav span {
+    display: block;
+  }
+
+  .card-body {
+    overflow: scroll;
   }
 }
 

@@ -28,6 +28,6 @@
         </li>
     @endguest
 
-    <lqdi-emails></lqdi-emails>
+    <lqdi-emails :collection="{{ $users }}"></lqdi-emails>
 
 @endsection

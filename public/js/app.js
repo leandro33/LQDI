@@ -1938,7 +1938,34 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    collection: Array
+  },
+  data: function data() {
+    return {
+      columns: ['id', 'name', 'email', ' '],
+      submitLabel: 'Enviar'
+    };
+  },
+  methods: {
+    send: function send(id) {
+      var _this = this;
+      var buttons = document.querySelectorAll('.send-buttons');
+      buttons.forEach(function (button) {
+        button.innerHTML = 'Enviar';
+      });
+      this.$refs[id][0].innerHTML = 'Enviando E-mail ...';
+      axios.post('/send-email', {
+        userId: id
+      }).then(function () {
+        _this.$refs[id][0].innerHTML = 'E-mail enviado com sucesso';
+      })["catch"](function (error) {
+        _this.$refs[id][0].innerHTML = 'Houve uma falha no\n envio para este E-mail';
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -1973,6 +2000,15 @@ __webpack_require__.r(__webpack_exports__);
     window.onscroll = function () {
       this.scrollY > 50 ? self.$refs.header.classList.add('scrolling') : self.$refs.header.classList.remove('scrolling');
     };
+  },
+  methods: {
+    listUsers: function listUsers() {
+      axios.get('/list').then(function (response) {
+        console.log('Users:\n', response);
+      })["catch"](function (error) {
+        console.log('Users:\n', error);
+      });
+    }
   }
 });
 
@@ -2019,7 +2055,28 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Message"
+  name: "Message",
+  data: function data() {
+    return {
+      submitLabel: 'Enviar',
+      name: '',
+      email: ''
+    };
+  },
+  methods: {
+    save: function save() {
+      var _this = this;
+      this.submitLabel = 'Enviando ...';
+      axios.post('/send-email', {
+        name: this.name,
+        email: this.email
+      }).then(function (response) {
+        response.data === 1 ? _this.submitLabel = 'E-mail salvo com sucesso!' : _this.submitLabel = 'Este E-mail já está cadastrado';
+      })["catch"](function (error) {
+        _this.submitLabel = 'Houve uma falha no casdastro\n tente novamente';
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -2093,7 +2150,11 @@ var staticRenderFns = [function () {
   }, [_c("h3", {
     staticClass: "title"
   }, [_vm._v("\n                    Receba os nossos\n                    artigos de interesse\n                    na sua caixa de\n                    entrada.\n                ")]), _vm._v(" "), _c("form", {
-    staticClass: "form"
+    staticClass: "form",
+    attrs: {
+      method: "get",
+      action: ""
+    }
   }, [_c("input", {
     attrs: {
       type: "email",
@@ -2106,17 +2167,32 @@ var staticRenderFns = [function () {
     staticClass: "text"
   }, [_vm._v("\n                    Siga-nos em\n                    nossas mídias\n                    sociais\n                ")]), _vm._v(" "), _c("div", {
     staticClass: "icons"
-  }, [_c("a", [_c("img", {
+  }, [_c("a", {
+    attrs: {
+      href: "https://www.instagram.com/lqdi_net/",
+      target: "_blank"
+    }
+  }, [_c("img", {
     attrs: {
       src: "img/mdi_instagram.png",
       alt: "instagram"
     }
-  })]), _vm._v(" "), _c("a", [_c("img", {
+  })]), _vm._v(" "), _c("a", {
+    attrs: {
+      href: "https://www.facebook.com/lqdi.net/",
+      target: "_blank"
+    }
+  }, [_c("img", {
     attrs: {
       src: "img/fe_facebook.png",
       alt: "facebook"
     }
-  })]), _vm._v(" "), _c("a", [_c("img", {
+  })]), _vm._v(" "), _c("a", {
+    attrs: {
+      href: "https://www.linkedin.com/company/lqdi-t-image/about/",
+      target: "_blank"
+    }
+  }, [_c("img", {
     attrs: {
       src: "img/ri_linkedin-box-fill.png",
       alt: "linkedin"
@@ -2229,11 +2305,6 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _vm._m(0);
-};
-var staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
   return _c("div", {
     staticClass: "container"
   }, [_c("div", {
@@ -2244,16 +2315,44 @@ var staticRenderFns = [function () {
     }
   }, [_c("div", {
     staticClass: "card lqdi-content lqdi-grid"
-  }, [_c("div", {
+  }, [_vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "card-body lqdi-grid__item"
+  }, [_c("table", {
+    staticClass: "table"
+  }, [_c("thead", [_c("tr", [_vm._l(_vm.columns, function (column, index) {
+    return _c("th", {
+      key: index
+    }, [_vm._v(" " + _vm._s(column))]);
+  }), _vm._v(" "), _c("td")], 2)]), _vm._v(" "), _c("tbody", _vm._l(_vm.collection, function (item, index) {
+    return _c("tr", {
+      key: index
+    }, [_vm._l(_vm.columns, function (column, indexColumn) {
+      return _c("td", {
+        key: indexColumn
+      }, [_vm._v(_vm._s(item[column]))]);
+    }), _vm._v(" "), _c("td", [_c("button", {
+      ref: item.id,
+      refInFor: true,
+      staticClass: "send-buttons",
+      on: {
+        click: function click($event) {
+          return _vm.send(item.id);
+        }
+      }
+    }, [_vm._v("Enviar")])])], 2);
+  }), 0)])])])])])]);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
     staticClass: "card-header lqdi-grid__item"
   }, [_c("img", {
     attrs: {
       src: "img/logo-lqdi-positivo-header.png",
       alt: "LQDI"
     }
-  }), _vm._v(" "), _c("h3", [_vm._v("Lista de E-mail's cadastrados através da Landpage"), _c("small", [_vm._v("Selecione um E-mail da lista para envio")])])]), _vm._v(" "), _c("div", {
-    staticClass: "card-body lqdi-grid__item"
-  })])])])]);
+  }), _vm._v(" "), _c("h3", [_vm._v("Lista de E-mail's cadastrados através da Landpage")]), _vm._v(" "), _c("h5", [_vm._v("Clique em enviar para receber o email teste")])]);
 }];
 render._withStripped = true;
 
@@ -2340,28 +2439,33 @@ var render = function render() {
   return _c("header", {
     ref: "header",
     staticClass: "lqdi-header"
-  }, [_vm._m(0)]);
+  }, [_c("div", {
+    staticClass: "lqdi-content lqdi-grid lqdi-grid--spread header-padd"
+  }, [_vm._m(0), _vm._v(" "), _c("nav", {
+    staticClass: "lqdi-nav"
+  }, [_c("span", [_vm._v("Agende uma reunião conosco")]), _vm._v(" "), _c("a", {
+    staticClass: "header-button",
+    attrs: {
+      href: "#"
+    },
+    on: {
+      click: function click($event) {
+        return _vm.listUsers();
+      }
+    }
+  }, [_vm._v("Começar")])])])]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "lqdi-content lqdi-grid lqdi-grid--spread header-padd"
-  }, [_c("div", {
     staticClass: "lqdi-logo"
   }, [_c("img", {
     attrs: {
       src: "img/logo-lqdi-positivo-header.png",
       alt: "LQDI"
     }
-  })]), _vm._v(" "), _c("nav", {
-    staticClass: "lqdi-nav"
-  }, [_c("span", [_vm._v("Agende uma reunião conosco")]), _vm._v(" "), _c("a", {
-    staticClass: "header-button",
-    attrs: {
-      href: "#"
-    }
-  }, [_vm._v("Começar")])])]);
+  })]);
 }];
 render._withStripped = true;
 
@@ -2408,11 +2512,6 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _vm._m(0);
-};
-var staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
   return _c("section", {
     staticClass: "lqdi-section",
     attrs: {
@@ -2420,35 +2519,63 @@ var staticRenderFns = [function () {
     }
   }, [_c("div", {
     staticClass: "lqdi-content lqdi-grid"
-  }, [_c("figure", {
+  }, [_vm._m(0), _vm._v(" "), _c("div", {
     staticClass: "lqdi-grid__item lqdi-width--half"
-  }, [_c("h2", {
-    staticClass: "h2"
-  }, [_vm._v("Viva uma nova experiência\n                de comunicação integrada\n                com foco nos resultados.")]), _vm._v(" "), _c("h3", [_vm._v("Escreva-nos sobre o seu projeto.")])]), _vm._v(" "), _c("div", {
-    staticClass: "lqdi-grid__item lqdi-width--half"
-  }, [_c("form", {
+  }, [_c("div", {
     staticClass: "form"
   }, [_c("label", {
     attrs: {
       "for": "name"
     }
   }, [_vm._v("Seu nome (requerido) ")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.name,
+      expression: "name"
+    }],
     attrs: {
       type: "text",
       name: "name",
+      id: "name",
       required: "",
       autocomplete: "name"
+    },
+    domProps: {
+      value: _vm.name
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.name = $event.target.value;
+      }
     }
   }), _vm._v(" "), _c("label", {
     attrs: {
       "for": "email"
     }
   }, [_vm._v("Seu E-mail (requerido) ")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.email,
+      expression: "email"
+    }],
     attrs: {
       type: "email",
       name: "email",
+      id: "email",
       required: "",
       autocomplete: "email"
+    },
+    domProps: {
+      value: _vm.email
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.email = $event.target.value;
+      }
     }
   }), _vm._v(" "), _c("label", {
     attrs: {
@@ -2457,7 +2584,8 @@ var staticRenderFns = [function () {
   }, [_vm._v("Assunto ")]), _vm._v(" "), _c("input", {
     attrs: {
       type: "text",
-      name: "subject"
+      name: "subject",
+      id: "subject"
     }
   }), _vm._v(" "), _c("label", {
     attrs: {
@@ -2465,7 +2593,8 @@ var staticRenderFns = [function () {
     }
   }, [_vm._v("Mensagem")]), _vm._v(" "), _c("textarea", {
     attrs: {
-      name: "message"
+      name: "message",
+      id: "message"
     }
   }), _vm._v(" "), _c("label", {
     attrs: {
@@ -2474,14 +2603,26 @@ var staticRenderFns = [function () {
   }, [_vm._v("Anexe um documento explicando seu projeto")]), _vm._v(" "), _c("input", {
     attrs: {
       type: "file",
-      name: "file"
+      name: "file",
+      id: "file"
     }
-  }), _vm._v(" "), _c("input", {
-    attrs: {
-      type: "submit",
-      value: "Enviar"
+  }), _vm._v(" "), _c("button", {
+    staticClass: "header-button",
+    on: {
+      click: function click($event) {
+        return _vm.save();
+      }
     }
-  })])])])]);
+  }, [_vm._v(_vm._s(_vm.submitLabel))])])])])]);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("figure", {
+    staticClass: "lqdi-grid__item lqdi-width--half"
+  }, [_c("h2", {
+    staticClass: "h2"
+  }, [_vm._v("Viva uma nova experiência\n                de comunicação integrada\n                com foco nos resultados.")]), _vm._v(" "), _c("h3", [_vm._v("Escreva-nos sobre o seu projeto.")])]);
 }];
 render._withStripped = true;
 

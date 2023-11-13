@@ -13,17 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/lqdi', function () {
-//     return view('landpage.lqdi.index');
-// });
-
-Route::get('/emails', 'LandPageController@emails')->name('emails');
+Route::get('/emails', 'SendEmailsController@index');
+Route::post('/send-email', 'SendEmailsController@ship');
 
 Route::get('/', 'LandPageController@index');
+Route::get('/list', 'UserController@list');
+Route::get('/getByEmail', 'UserController@getByEmail');
+Route::post('/save', 'UserController@save');
 
 Auth::routes();
 

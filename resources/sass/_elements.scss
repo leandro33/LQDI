@@ -52,11 +52,6 @@
 	background: $main-text-inverse;
 }
 
-.lqdi-pricing {
-	text-align: left;
-	padding: 0 0 20px;
-}
-
 .lqdi-bigtext {
 	font-size: 3em;
 	font-weight: bold;
@@ -88,7 +83,6 @@
 	background: $form-background;
 	color: $main-text-inverse;
 	line-height: 1;
-	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: bold;
 	font-size: $main-link-size;
@@ -106,10 +100,9 @@
 	background: $background-button-black;
 	color: $main-text-inverse;
 	line-height: 1;
-	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: bold;
-	font-size: $main-link-size;
+	font-size: $main-link-size;	
 	padding: 1.3em 2.5em;
 	margin: 20px 0;
 	white-space: nowrap;
@@ -121,7 +114,6 @@
 	background: $background-button-teal;
 	color: $main-text-inverse;
 	line-height: 1;
-	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: bold;
 	font-size: $main-link-size;

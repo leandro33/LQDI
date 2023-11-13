@@ -85,6 +85,9 @@
 ## Teste prático
 
 Projeto iniciado em 07/11/2023 às 16:14.
+Projeto finalizado em 13/11/2023 às 17:00.
+
+Link para [landpage](http://leandro-lqdi.000webhostapp.com/public/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
